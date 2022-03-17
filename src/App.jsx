@@ -1,6 +1,6 @@
 import ListaDeTareas from './componentes/ListaDeTareas';
 
-function App() {
+export default function App() {
   return (
     <div className=' d-flex flex-column justify-content-center'>
       <h1 className="text-center my-3 text-light">Mis Tareas</h1>
@@ -9,4 +9,3 @@ function App() {
   );
 }
 
-export default App;
