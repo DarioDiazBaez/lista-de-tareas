@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import TareaFormulario from './TareaFormulario';
 import Tarea from './Tarea';
-import '../hojas-de-estilo/ListaDeTareas.css';
 
 function ListaDeTareas() {
 
@@ -33,10 +32,11 @@ function ListaDeTareas() {
   return (
     <>
       <TareaFormulario onSubmit={agregarTarea} />
-      <div className='tareas-lista-contenedor'>
+      <div className='px-5'>
         {
           tareas.map((tarea) =>
             <Tarea
+              className='bg-info'
               key={tarea.id}
               id={tarea.id} 
               texto={tarea.texto}

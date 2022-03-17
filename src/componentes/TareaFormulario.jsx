@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import '../hojas-de-estilo/TareaFormulario.css';
 import { v4 as uuidv4 } from 'uuid';
 
 function TareaFormulario(props) {
@@ -23,20 +22,10 @@ function TareaFormulario(props) {
   }
 
   return (
-    <form 
-      className='tarea-formulario'
-      onSubmit={manejarEnvio}>
-      <input 
-        className='tarea-input'
-        type='text'
-        placeholder='Escribe una Tarea'
-        name='texto'
-        onChange={manejarCambio}
-      />
-      <button className='tarea-boton'>
-        Agregar Tarea
-      </button>
-    </form>
+<form className="input-group mb-3 px-5" onSubmit={manejarEnvio} >
+  <input type="text" className="form-control" placeholder="Escribe una Tarea" aria-label="Recipient's username" name='texto' onChange={manejarCambio} />
+  <button className="btn btn-outline-secondary" type="submit" id="button-addon2">Agregar Tarea</button>
+</form>
   );
 }
 
